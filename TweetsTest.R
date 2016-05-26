@@ -32,6 +32,8 @@ getTweets <- function(numTweets, hashTag) {
       u1 <- unlist(tweets$lang)
       u2 <- unlist(tweets$user$lang)
       u3 <- unlist(tweets$user$location)
+      u4 <- unlist(tweets$place)
+      u5 <- unlist(tweets$latitude)
       tweets <- cbind(u1,u2,u3)
 
       needTweets <- needTweets - nrow(tweets)
